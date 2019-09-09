@@ -1,1 +1,1 @@
-# django_week
+# Project Web App "django_week"
