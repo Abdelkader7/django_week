@@ -11,7 +11,11 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
     <div class="view" style="background-image: url('https://cdn.pixabay.com/photo/2017/02/15/10/57/pizza-2068272_960_720.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">-->
 <center><h1>Login saisie : {{login}}</h1></center>
 <center><h1>Mot de passe saisie : {{password}}</h1></center>
-<center><a class="btn btn-success" href="#" role="button">Go to the map</a><center>
+<center><a class="btn btn-primary" href="{% url 'carte' %}" role="button">Go to the map</a><center>
+
+
+<center><a class="btn btn-primary" href="#" role="button">Go to the graph</a><center>
+
 <form action="" method="post">
     {% csrf_token %}
     <div class="wrapper fadeInDown">

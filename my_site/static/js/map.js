@@ -13,7 +13,7 @@ Highcharts.getJSON('https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/sam
     },
 
     title: {
-      text: 'Fixed tooltip with HTML'
+      text: 'Exercice TP Django'
     },
 
     legend: {
