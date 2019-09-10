@@ -34,4 +34,17 @@ def carte(request):
 
 
 def graph(request):
-    return render(request, "graph_page.html")
+    return render(request, "graph.html")
+
+def subscribe(request):
+    if request.method == "POST":
+       # print(request.POST)
+        login_user = request.POST["login"]
+        password_user = request.POST["password"]
+        print(login_user)
+
+        print(password_user)
+        
+        return render(request, "login.html",{"login":login_user,"password":password_user})
+    else:
+        return render(request, "subscribe.html")

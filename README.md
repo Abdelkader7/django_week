@@ -1,1 +1,4 @@
-# Project Web App "django_week"
+# Project groupe Web App "django_week"
+#Jeancy Soumbou
+#Rizvane Mougamadou
+#Hamra Abdelkader

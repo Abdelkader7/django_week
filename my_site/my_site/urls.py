@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .views import home_page_view,home_page_view_with_render,login,carte, graph
+from .views import home_page_view,home_page_view_with_render,login,carte, graph,subscribe
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,7 +24,9 @@ urlpatterns = [
     path('home_page',home_page_view_with_render, name="home_render"),
     path('login/', login, name='login'),
     path('carte/', carte, name='carte'),
-    path('graph/', graph, name='graph')
+    path('graph/', graph, name='graph'),
+    path('subscribe/', subscribe, name='subscribe')
+
 
 
     
