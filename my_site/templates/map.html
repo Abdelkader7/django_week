@@ -1,4 +1,6 @@
 {% load static %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <script src="https://code.highcharts.com/maps/highmaps.js"></script>
 <script src="https://code.highcharts.com/maps/modules/data.js"></script>
@@ -7,8 +9,14 @@
 <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
 <script src= "{% static 'js/map.js' %}"></script>
 
-<!-- Flag sprites service provided by Martijn Lafeber, https://github.com/lafeber/world-flags-sprite/blob/master/LICENSE -->
-<link rel="stylesheet" type="text/css" href="//github.com/downloads/lafeber/world-flags-sprite/flags32.css" />
-<center><a class="btn btn-primary" href="{% url 'login' %}" role="button">Retour</a><center>
+<div class="container text-center">
+    <!-- Flag sprites service provided by Martijn Lafeber, https://github.com/lafeber/world-flags-sprite/blob/master/LICENSE -->
+    <link rel="stylesheet" type="text/css" href="//github.com/downloads/lafeber/world-flags-sprite/flags32.css" />
 
-<div id="container"></div>
+
+    <a class="btn btn-primary" href="{% url 'login' %}" role="button">Retour</a>
+
+    <div id="container">
+    </div>
+
+</div>

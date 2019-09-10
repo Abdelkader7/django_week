@@ -31,3 +31,7 @@ def login(request):
 
 def carte(request):
     return render(request,"map.html")
+
+
+def graph(request):
+    return render(request, "graph_page.html")

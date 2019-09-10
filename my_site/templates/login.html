@@ -13,7 +13,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 <center><h1>Mot de passe saisie : {{password}}</h1></center>
 <center><a class="btn btn-primary" href="{% url 'carte' %}" role="button">Go to the map</a><center>
 <br>
-<center><a class="btn btn-primary" href="#" role="button">Go to the graph</a><center>
+<center><a class="btn btn-primary" href="{% url 'graph' %}" role="button">Go to the graph</a><center>
 
 <form action="" method="post">
     {% csrf_token %}
