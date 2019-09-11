@@ -24,23 +24,19 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
     <div class="form-row mb-4 fadeIn second">
         <div class="col">
             <!-- First name -->
-            <input type="text" id="Nom" class="form-control" placeholder="Nom">
+            <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Nom">
         </div>
         <div class="col">
             <!-- Last name -->
-            <input type="text" id="Prenom" class="form-control" placeholder="Prénom">
+            <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Prénom">
         </div>
     </div>
-    
 <div class="fadeIn third">
-<!-- Username -->
-    <input type="text" id="identifiant" class="form-control mb-4  " placeholder="Identifiant">
-
     <!-- E-mail -->
-    <input type="text" id="email" class="form-control mb-4  " placeholder="E-mail">
+    <input type="text" id="defaultRegisterFormEmail" class="form-control mb-4  " placeholder="E-mail">
 
     <!-- Password -->
-    <input type="text" id="password" class="form-control" placeholder="Mot de passe" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+    <input type="text" id="defaultRegisterFormPassword" class="form-control" placeholder="Mot de passe" aria-describedby="defaultRegisterFormPasswordHelpBlock">
     <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
 6 caractères maximum    </small>
 
@@ -63,11 +59,10 @@ Facultatif    </small>
   
       <!-- Remind Passowrd -->
       <div id="formFooter">
-        <a class="underlineHover" href="{% url 'login2' %}">Annuler</a>
+        <a class="underlineHover" href="{% url 'login' %}">Annuler</a>
       </div>
   
     </div>
   </div>
   
 </form>
-
