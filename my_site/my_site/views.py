@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
+from .logic_for_views import store_restaurant, db
 
 
 #import matplotlib 
@@ -59,3 +60,15 @@ def subscribe(request):
        return render(request, "home_page.html")
     else:
         return render(request, "subscribe.html")
+
+def restaurant_registration(request): 
+    if request.method == "POST":
+        restaurant_nom = request.POST["nom_restaurant"]
+        restaurant_adresse = request.POST["adresse_restaurant"]
+        
+        if(store_restaurant(nom=restaurant_nom, adresse=restaurant_adresse, db=db, collection="restaurant")):
+            return render(request, "restaurant_registration.html", {"title_page": "Enregistrement d'un restaurant",'message_success': "Restaurant enregistré !"})
+        else:
+            return render(request, "restaurant_registration.html", {"title_page": "Enregistrement d'un restaurant",'message_fail': "Restaurant déjà existant !"})
+
+    return render(request, "restaurant_registration.html", {"title_page": "Enregistrement d'un restaurant"})
