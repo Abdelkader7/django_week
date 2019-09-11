@@ -11,7 +11,11 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-
+"""
+Superuser:
+username = IPSSI
+password = ipssi
+"""
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -125,6 +129,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL =  '/carte'
+LOGIN_REDIRECT_URL =  '/home_page'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
