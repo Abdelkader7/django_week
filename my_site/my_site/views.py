@@ -4,15 +4,12 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
-from .logic_for_views import store_restaurant, db
 
-
+from .logic_for_views import store_restaurant, db, get_restaurant
 #import matplotlib 
 #matplotlib.use('TkAgg')
 
 #from matplolib import pylab 
-
-
 
 def home_page_view(request):
     return HttpResponse('Hello World')
@@ -69,3 +66,8 @@ def restaurant_registration(request):
             return render(request, "restaurant_registration.html", {"title_page": "Enregistrement d'un restaurant",'message_fail': "Restaurant déjà existant !"})
 
     return render(request, "restaurant_registration.html", {"title_page": "Enregistrement d'un restaurant"})
+
+def restaurant_liste(request):
+    liste_restaurants = get_restaurant(db=db, collection="restaurant")
+    print(liste_restaurants)
+    return render(request, "restaurant_liste.html", {"title_page": "Liste des restaurants", "liste_restaurants":liste_restaurants})

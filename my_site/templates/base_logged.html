@@ -8,6 +8,8 @@
 
 <body>
   <div  class="container">
+
+
       {% if message_success %}
         <div class="alert alert-success" role="alert">
             {{ message_success }}
@@ -19,6 +21,8 @@
             {{ message_fail }}
         </div>
       {% endif %}
+
+      
       <h1  class="text-center">{{ title_page }}</h1>
       {% block main %}
       {% endblock %}

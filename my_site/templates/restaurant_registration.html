@@ -8,17 +8,20 @@
         {% csrf_token %}
         <div class="form-group">
           <label for="nom_restaurant">Nom du restaurant</label>
-          <input type="text" class="form-control" name= "nom_restaurant" id="nom_restaurant" aria-describedby="emailHelp">
+          <input required type="text" class="form-control" name= "nom_restaurant" id="nom_restaurant" aria-describedby="emailHelp">
         </div>
         <div class="form-group">
           <label for="adresse_restaurant">Adresse</label>
-          <input type="text" class="form-control" name="adresse_restaurant" id="adresse_restaurant">
+          <input required type="text" class="form-control" name="adresse_restaurant" id="adresse_restaurant">
         </div>
         <div class="form-group float-right">
 
         <button type="submit" class="btn btn-primary">Enregistrer l'établissement</button>
+        
         </form>
       </form>
+      <a type="button" class="btn btn-info" href="{% url 'restaurant_liste' %}">Liste des établissements</a>
+
 </div>
 
 {% endblock %}

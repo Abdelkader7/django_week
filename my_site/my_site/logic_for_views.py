@@ -22,5 +22,9 @@ def store_restaurant(nom, adresse, db, collection):
 
     return None
 
+def get_restaurant(db, collection):
+    liste_restaurant = list(db["restaurant"].find())
+    return liste_restaurant
+
 
     

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
     <div class="container">
-      <a class="navbar-brand" href="#">Where Eat</a>
+      <a class="navbar-brand" href="{% url 'home_render' %}">Where Eat</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -16,7 +16,7 @@
             <a class="nav-link {% if title_page == 'Carte'%} active {% endif %}" href="{% url 'carte' %}">Map</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if title_page == 'Enregistrement d\'un restaurant' %} active {% endif %}" href="{% url 'restaurant_registration' %}">Enregistrer un établissement</a>
+            <a class="nav-link {% if title_page == 'Enregistrement d\'un restaurant' %} active {% endif %}" href="{% url 'restaurant_registration' %}">Gérer mes établissements</a>
           </li>
            <li class="nav-item">
             <a class="nav-link btn btn-primary" href="{% url 'logout' %}">Déconnexion</a>
