@@ -4,6 +4,8 @@
 <link  rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"  crossorigin="anonymous">
 <title>{{ title_page }}</title>
 </head>
+{% include 'navbar.html' %}
+
 <body>
   <div  class="container">
       {% if message_success %}
@@ -17,13 +19,10 @@
             {{ message_fail }}
         </div>
       {% endif %}
-    <div  class="row justify-content-center">
-      <div class="col-8">
       <h1  class="text-center">{{ title_page }}</h1>
       {% block main %}
       {% endblock %}
-      </div>
-    </div>
+     
   </div>
 </body>
 </html>

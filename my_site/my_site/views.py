@@ -19,12 +19,9 @@ def home_page_view(request):
 
 #@login_required
 def home_page_view_with_render(request):
-    return render(request,"home_page.html")
+    return render(request,"home_page.html", {"title_page": "Accueil"})
 
 def login2(request):
-
-   
-
     if request.method == "POST":
         username = request.POST['login']
         password = request.POST['password']
@@ -39,13 +36,13 @@ def login2(request):
     else:
         return render(request, "login.html")
 
-@login_required
+#@login_required
 def carte(request):
-    return render(request,"map.html")
+    return render(request,"map.html", {"title_page": "Carte"})
 
 
 def graph(request):
-    return render(request, "graph.html")
+    return render(request, "graph.html", {"title_page": "Graphique"}  )
 
 def subscribe(request):
     if request.method == "POST":
@@ -57,9 +54,9 @@ def subscribe(request):
        user.last_name = request.POST["nom"] 
        user.last_name = request.POST["prenom"] 
 
-       return render(request, "home_page.html")
+       return render(request, "home_page.html", {"title_page": "Inscription"})
     else:
-        return render(request, "subscribe.html")
+        return render(request, "subscribe.html", {"title_page": "Inscription"})
 
 def restaurant_registration(request): 
     if request.method == "POST":
