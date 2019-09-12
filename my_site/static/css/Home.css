@@ -53,7 +53,7 @@ ul{
 
 
 .our-webcoderskull{
-  background: url("http://www.webcoderskull.com/img/right-sider-banner.png") no-repeat center top / cover;
+  background: url("https://source.unsplash.com/RCAhiGJsUUE/1920x1080") no-repeat center top / cover;
   
 }
 .our-webcoderskull .cnt-block{ 
@@ -111,4 +111,19 @@ ul{
 }
 .our-webcoderskull .cnt-block .follow-us li .fa:hover{ 
    color:#025a8e;
+}
+
+.carousel-item {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .carousel-caption {
+    top: 30%;
+    bottom: auto;
 }
