@@ -76,7 +76,7 @@ def restaurant_registration(request):
     return render(request, "restaurant_registration.html", {"title_page": "Enregistrement d'un restaurant", 
                                                             "nbre_restaurant": nbre_restaurant })
 
-
+@login_required(login_url='')
 def restaurant_liste(request):
     liste_restaurants = get_restaurant(db=db, collection="restaurant")
     return render(request, "restaurant_liste.html", {"title_page": "Liste des restaurants", "liste_restaurants":liste_restaurants})
