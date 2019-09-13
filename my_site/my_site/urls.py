@@ -17,25 +17,23 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
 
-from .views import home_page_view,home_page_view_with_render,login2,carte, graph,subscribe, restaurant_registration, restaurant_liste
+from .views import home_page_view_with_render,carte, graph,subscribe, restaurant_registration, restaurant_liste,redirection, user_liste
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_page_view, name='home'),
     path('home_page',home_page_view_with_render, name="home_render"),
     path('carte/', carte, name='carte'),
     path('graph/', graph, name='graph'),
     path('subscribe/', subscribe, name='subscribe'),
     path('login/', auth_views.LoginView.as_view(), name='login'),
+    path('', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('passwordreset/', auth_views.PasswordResetView.as_view(), name='passwordreset'),
     path('password-reset/done/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
     path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
     path('reset/done/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
     path('restaurant_registration/', restaurant_registration, name="restaurant_registration"),
-    path('restaurant_liste/', restaurant_liste, name="restaurant_liste")
-
-
-
-    
+    path('restaurant_liste/', restaurant_liste, name="restaurant_liste"),
+    path('redirection/', redirection, name="redirection"),
+    path('user_liste/', user_liste, name="user_liste")
 ]

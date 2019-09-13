@@ -7,16 +7,14 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Restaurant</th>
-                <th scope="col">Adresse</th>
+                <th scope="col">Nom d'utilisateur</th>
               </tr>
             </thead>
             <tbody>
-                {% for restaurant in liste_restaurants %}
+                {% for user in users %}
                 <tr>
                     <td>{{ forloop.counter }}</td>
-                    <td>{{ restaurant.restaurant_nom }}</td>
-                    <td>{{ restaurant.restaurant_adresse }}</td>
+                    <td>{{ user }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
