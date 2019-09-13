@@ -6,7 +6,7 @@ django-crispy-forms==1.7.2
 idna==2.8
 kiwisolver==1.1.0
 matplotlib==3.1.1
-mkl-fft==1.0.14
+#mkl-fft==1.0.14
 mkl-random==1.0.2
 mkl-service==2.3.0
 multitasking==0.0.9
