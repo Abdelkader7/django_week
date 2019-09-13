@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
 
-from .views import home_page_view_with_render,carte, graph,subscribe, restaurant_registration, restaurant_liste,redirection, user_liste
+from .views import home_page_view_with_render,carte, graph,subscribe, redirection, user_liste
 
 urlpatterns = [
     path('admin/', admin.site.urls),

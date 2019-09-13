@@ -6,8 +6,8 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
 
-from .logic_for_views import store_restaurant, get_restaurant, count_restaurant, get_users
-from .connect_to_mongodb import get_count_from_mongo, db
+from .logic_for_views import get_users
+#from .connect_to_mongodb import get_count_from_mongo, db
 
 
 #import matplotlib 
