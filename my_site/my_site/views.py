@@ -17,28 +17,29 @@ from .connect_to_mongodb import get_count_from_mongo, db
 
 
 
-@login_required(login_url='/login')
+@login_required(login_url='')
 def home_page_view_with_render(request):
     return render(request,"home_page.html", {"title_page": "Accueil"})
 
-def not_in_client_group(user):
+def in_client_group(user):
     if user:
         return user.groups.filter(name='clients').count() != 0
     return False
 
-def not_in_restaurant_group(user):
+def in_restaurant_group(user):
     if user:
         return user.groups.filter(name='restaurants').count() != 0
     return False
 
+@login_required(login_url='')
 def redirection(request):
     return render(request,"redirection.html", {"title_page": "Error"})
     
-
+@login_required(login_url='')
 def carte(request):
     return render(request,"map.html", {"title_page": "Carte"})
 
-
+@login_required(login_url='')
 def graph(request):
     return render(request, "graph.html", {"title_page": "Graphique"}  )
 
@@ -57,7 +58,7 @@ def subscribe(request):
         return render(request, "subscribe.html", {"title_page": "Inscription"})
 
 @login_required(login_url='/login')
-@user_passes_test(not_in_restaurant_group, login_url='/redirection')
+@user_passes_test(in_restaurant_group, login_url='/redirection')
 def restaurant_registration(request): 
     nbre_restaurant = get_count_from_mongo(db=db, collection_name="restaurant")
     if request.method == "POST":
@@ -81,6 +82,6 @@ def restaurant_liste(request):
     return render(request, "restaurant_liste.html", {"title_page": "Liste des restaurants", "liste_restaurants":liste_restaurants})
 
 @login_required(login_url='')
-@user_passes_test(not_in_restaurant_group, login_url='/redirection')
+@user_passes_test(in_client_group, login_url='/redirection')
 def user_liste(request):
     return render(request, "user_liste.html", {"title_page": "Liste des utilisateurs",'users':get_users()})
