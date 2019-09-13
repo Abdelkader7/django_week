@@ -2,7 +2,7 @@ import pymongo
 from django.contrib.auth.models import User
 
 client = pymongo.MongoClient()
- Le nom de la DB est "restaurants" (si elle n'existe pas elle est créée)
+ #Le nom de la DB est "restaurants" (si elle n'existe pas elle est créée)
 db = client["restaurant"]
 
 print("{} restaurants in the DB".format(db["restaurant"].count_documents({})))
