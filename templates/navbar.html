@@ -15,12 +15,6 @@
           <li class="nav-item">
             <a class="nav-link {% if title_page == 'Carte'%} active {% endif %}" href="{% url 'carte' %}">Map</a>
           </li>
-           <li class="nav-item">
-            <a class="nav-link {% if title_page == 'Enregistrement d\'un restaurant' %} active {% endif %}" href="{% url 'restaurant_registration' %}">Ajouter un établissement</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if title_page == 'Liste des restaurants' %} active {% endif %}" href="{% url 'restaurant_liste' %}">Voir mes établissements <span class="badge badge-light">{{ nbre_restaurant }}</span></a>            
-          </li>
           <li class="nav-item">
             <a class="nav-link {% if title_page == 'Liste des utilisateurs' %} active {% endif %}" href="{% url 'user_liste' %}">Liste des utilisateurs</a>            
           </li>
